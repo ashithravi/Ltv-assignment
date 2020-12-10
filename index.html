@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Frontend Challenge Ashith</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./main.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <span class="logo-container">
+                <img src="./images/Logo@2x.png" />
+            </span>
+            <span class="icon-container">
+                <img src="./images/icn_search@2x.png" />
+                <img src="./images/icn_person@2x.png" />
+            </span>
+        </header>
+        <section id="search-section" class="search-section">
+            <h1>
+                Search Any Email Address
+            </h1>
+            <p>
+                <span class="markup">Start Here - </span>
+                Look up the owner's name, photos, and online profiles.
+            </p>
+            <p>
+                See what you find!
+            </p>
+            <div class="form-controls">
+                <input placeholder="EMAIL" id="email" />
+                <span class="email-error" id="email-error">
+                    Please add a valid email address
+                </span>
+                <br/>
+                <Button onclick="validateEmail()">Go!</Button>
+            </div>
+            <div class="email-section">
+                <img src="./images/lock@2x.png" />
+                <span>Enter Any Email Address. They won't be notified.</span>
+            </div>
+        </section>
+        <section class="main-section">
+            <section class="body-section">
+                <h2>
+                    Reverse Email Lookup
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </section>
+            <section class="list-section">
+                <div class="list-col">
+                    <div class="list-item">
+                        <span class="list-index">1</span>
+                        <span class="list-text">
+                            <span class="list-title">Lorem Ipsum</span><br/>
+                            <span class="list-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </span>
+                        </span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-index">2</span>
+                        <span class="list-text">
+                            <span class="list-title">Lorem Ipsum</span><br/>
+                            <span class="list-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </span>
+                        </span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-index">3</span>
+                        <span class="list-text">
+                            <span class="list-title">Lorem Ipsum</span><br/>
+                            <span class="list-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="list-col">
+                    <div class="list-item">
+                        <span class="list-index">4</span>
+                        <span class="list-text">
+                            <span class="list-title">Lorem Ipsum</span><br/>
+                            <span class="list-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </span>
+                        </span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-index">5</span>
+                        <span class="list-text">
+                            <span class="list-title">Lorem Ipsum</span><br/>
+                            <span class="list-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </span>
+                        </span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-index">6</span>
+                        <span class="list-text">
+                            <span class="list-title">Lorem Ipsum</span><br/>
+                            <span class="list-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="loader">
+            <img src="./images/loading_spinner.gif" />
+            <p>Please wait a moment...</p>
+        </section>
+        
+        <section class="result-section">
+            <h2>Result</h2>
+            <p>
+                Look at the result below to see the details of the person you’re searched for.
+            </p>
+            <div class="result-details">
+                <h2>
+                    <span id="first-name"></span>
+                    <span id="last-name"></span>
+                </h2>
+                <p id="description"></p>
+                <div class="result-col">
+                    <div class="col">
+                        <h3>Address</h3>
+                        <p id="address"></p>
+                        <h3>Email</h3>
+                        <p id="email-text"></p>
+                    </div>
+                    <div class="col">
+                        <h3>Phone Numbers</h3>
+                        <p id="phone-numbers"></p>
+                        <h3>Relatives</h3>
+                        <p id="relatives"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="search-result-section" class="search-section">
+            <h1>
+                Can’t Find The Right Person?
+            </h1>
+            <p>
+                <span class="markup">Try again - </span>
+                Make a new search
+            </p>
+            <div class="form-controls">
+                <input placeholder="EMAIL" id="email-result" />
+                <span class="email-error" id="email-error-result">
+                    Please add a valid email address
+                </span>
+                <br/>
+                <Button onclick="validateResultEmail()">Go!</Button>
+            </div>
+            <div class="email-section">
+                <img src="./images/lock@2x.png" />
+                <span>Enter Any Email Address. They won't be notified.</span>
+            </div>
+        </section>
+        
+        <footer>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <nav>
+                <a>Terms</a>
+                <a>Privacy</a>
+            </nav>
+        </footer>
+
+    </body>
+</html>

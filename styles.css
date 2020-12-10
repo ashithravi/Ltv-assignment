@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue';
+}
+
+header {
+    background-color: #004A80;
+    display: flex;
+    padding: 20px 15px;
+}
+
+.logo-container {
+    flex: 3;
+}
+
+.logo-container img {
+    width: 173px;
+    height: 25px;
+}
+
+.icon-container {
+    flex: 1;
+    text-align: right;
+}
+
+.icon-container img {
+    height: 23px;
+    width: 23px;
+}
+
+.icon-container img:first-child {
+    margin-right: 25px;   
+}
+
+.main-section {
+    background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+}
+
+.search-section {
+    background-color: #004A80;
+    padding: 20px 15px 20px 25px;
+    position: relative;
+    top: -1px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.search-section h1 {
+    color: #fff;
+    font-size: 38px;
+    margin: 0;
+}
+
+.search-section .markup {
+    color: #F6BC25;
+    font-size: 18px;
+}
+
+.form-controls input, .form-controls button {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.email-error {
+    display: none;
+    background: #DC0015;
+    border-radius: 0px 0px 3px 3px;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+#email-error-result {
+    display: none;
+}
+
+.error-input {
+    border: 2px solid #DC0015;
+    border-radius: 3px 3px 0 0;
+}
+
+.form-controls button {
+    background-image: linear-gradient(#F2DA56, #F6BC25);
+    color: #004A80;
+    font-size: 22px;
+}
+
+.email-section {
+    color: #F6BC25;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.email-section img {
+    height: 19px;
+    width: 15px;
+    margin-right: 10px;
+}
+
+.body-section h2 {
+    font-size: 38px;
+    color: #004A80;
+    text-align: center;
+    font-weight: bold;
+}
+
+.body-section p {
+    font-size: 18px;
+    color: #4A4A4A;
+    line-height: 28px;
+}
+
+.body-section{
+    padding: 30px 15px;
+}
+
+.list-section {
+    padding: 0px 15px 20px 15px;
+}
+
+
+.list-item {
+    display: flex;
+    margin-top: 20px;
+}
+
+.list-index {
+    background-color: #004A80;
+    border-radius: 50%;
+    text-align: center;
+    height: 50.4px;
+    font-size: 26.88px;
+    color: #F6BC25;
+    display: inline-block;
+    padding: 8px 18px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.list-title {
+    font-size: 20px;
+    color: #004A80;
+    font-weight: bold;
+}
+
+.list-content {
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+footer {
+    padding: 15px;
+    font-size: 15px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+footer nav {
+    text-align: center;
+}
+
+footer nav a {
+    font-size: 14px;
+    color: #004A80;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+
+footer nav a:first-child::after {
+    padding-left: 10px;
+    content: '|';
+    padding-right: 5px;
+}
+
+.result-section {
+    display: none;
+    padding: 15px;
+}
+
+.result-details {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.result-details h2 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #004A80;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.result-details h3 {
+    font-size: 20px;
+    color: #004A80;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+
+.result-details p {
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.result-details #phone-numbers {
+    color: #004A80;
+}
+
+#loader {
+    display: none;
+    text-align: center;
+}
+
+#loader p {
+    font-size: 18px;
+    color: #004A80;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#search-result-section {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .form-controls {
+        display: flex;
+    }
+    .form-controls input {
+        flex: 3;
+    }
+    .form-controls button {
+        flex: 1;
+        margin-left: 20px;
+    }
+    .list-section {
+        display: flex;
+    }
+    .list-col:first-child {
+        padding-right: 30px;
+    }
+    .list-col:last-child {
+        padding-left: 30px;
+    }
+    footer {
+        display: flex;
+    }
+    footer p {
+        flex: 3;
+    }
+    footer nav {
+        flex: 1;
+        padding-top: 20px;
+    }
+    .result-col {
+        display: flex;
+    }
+    .col {
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header, .search-section, .main-section, .result-section, #loader, footer {
+        padding-left: 230px;
+        padding-right: 230px;
+    }
+}
+
+
